@@ -118,6 +118,12 @@ Value is a list of strings, which may be nil."
   :type '(repeat (string :tag "Argument"))
   :group 'powershell)
 
+(defcustom explicit-pwsh.exe-args '("-Command" "-" )
+  "Args passed to inferior shell by \\[shell], if the shell is pwsh.exe.
+Value is a list of strings, which may be nil."
+  :type '(repeat (string :tag "Argument"))
+  :group 'powershell)
+
 (defun powershell-continuation-line-p ()
   "Return t is the current line is a continuation line.
 The current line is a continued line when the previous line ends
